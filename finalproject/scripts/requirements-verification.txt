@@ -1,0 +1,4 @@
+# Optional packaged simulator for machines without a system Verilator installation.
+# Python 3.9+, a C++20 compiler, and make are also required.
+# Provides the verilator-cli command; use VERILATOR=verilator-cli.
+verilator==5.38.0
