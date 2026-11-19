@@ -1,23 +1,24 @@
 `default_nettype none
+// Explicit input net kinds are required by Vivado 2022.2 with default_nettype none.
 // Single-channel, post-trigger acquisition. All ports except probe_async are clk synchronous.
 module capture_core #(
     parameter integer SAMPLE_DIV = 1000
 ) (
-    input  logic        clk,
-    input  logic        rst,
-    input  logic        probe_async,
-    input  logic        arm,
-    input  logic        abort_capture,
-    input  logic [1:0]  trigger_mode, // 0 immediate, 1 rising, 2 falling, 3 either
-    output logic        busy,
-    output logic        armed,
-    output logic        done,
-    output logic        done_pulse,
-    output logic [10:0] sample_count,
-    input  logic        rd_en,
-    input  logic [9:0]  rd_addr,
-    output logic        rd_valid,
-    output logic [15:0] rd_data
+    input  wire logic         clk,
+    input  wire logic         rst,
+    input  wire logic         probe_async,
+    input  wire logic         arm,
+    input  wire logic         abort_capture,
+    input  wire logic  [1:0]  trigger_mode, // 0 immediate, 1 rising, 2 falling, 3 either
+    output      logic         busy,
+    output      logic         armed,
+    output      logic         done,
+    output      logic         done_pulse,
+    output      logic  [10:0] sample_count,
+    input  wire logic         rd_en,
+    input  wire logic  [9:0]  rd_addr,
+    output      logic         rd_valid,
+    output      logic  [15:0] rd_data
 );
     localparam integer DIV_W = (SAMPLE_DIV > 1) ? $clog2(SAMPLE_DIV) : 1;
     // Illegal configurations fail elaboration without simulation-only RTL assertions.
@@ -119,3 +120,4 @@ module capture_core #(
         end
     end
 endmodule
+`default_nettype wire
