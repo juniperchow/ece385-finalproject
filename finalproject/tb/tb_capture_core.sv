@@ -57,5 +57,9 @@ module tb_capture_core;
         #200000000;
         $fatal(1, "Watchdog expired");
     end
+    initial begin
+        $dumpfile("build/capture/capture.vcd");
+        $dumpvars(0, tb_capture_core);
+    end
 endmodule
 `default_nettype wire
