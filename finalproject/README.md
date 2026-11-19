@@ -8,7 +8,7 @@ connected yet. The existing starter project is preserved.
 
 From `finalproject/`, on Linux with Python 3 and Icarus Verilog or Verilator 5+:
 
-```sh
+```export PATH=$PATH:./tools/Xilinx/Vivado/2022.2/bin/
 make test                 # Prefer Icarus if installed; otherwise Verilator
 make test-iverilog
 make test-verilator
