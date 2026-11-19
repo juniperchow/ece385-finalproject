@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/juniper/Documents/ece385final/finalproject/finalproject.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+/home/juniper/Documents/ece385final/finalproject/rtl/capture_core.sv,1795121762,systemVerilog,,/home/juniper/Documents/ece385final/finalproject/tb/tb_capture_core.sv,,capture_core,,uvm,../../../../finalproject.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/juniper/Documents/ece385final/finalproject/tb/tb_capture_core.sv,1795053321,systemVerilog,,,,tb_capture_core,,uvm,../../../../finalproject.gen/sources_1/ip/clk_wiz_0,,,,,

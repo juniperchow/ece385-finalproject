@@ -119,4 +119,3 @@ module capture_core #(
         end
     end
 endmodule
-`default_nettype wire
